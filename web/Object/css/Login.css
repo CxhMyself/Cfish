@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+#L-Top{
+    width: 100%;
+    height: 80px;
+    /*border: 0.1px solid green;*/
+}
+#L-Middle{
+    width: 100%;
+    height: 30px;
+    /*border: 0.1px solid green;*/
+    background-color: rgb(255,248,240);
+}
+#L-Middle p{
+    font-size: 80%;
+    color: rgb(153,153,153);
+}
+#L-Middle a{
+    color: black;
+    text-decoration: none;
+}
+#L-Middle a:hover{
+    text-decoration: underline;
+}
+.L-2{
+    position: relative;
+    left: 23%;
+    top: 10%;
+}
+#L-Bottom{
+    width: 100%;
+    height: 475px;
+    /*border: 0.1px solid green;*/
+    background-color: rgb(242,142,28);
+}
+#L-end{
+    width: 70%;
+    height: 475px;
+    /*border: 0.1px solid red;*/
+    position: relative;
+    left: 16%;
+    background-image: url("../images/LOG/北京.jpg");
+}
+#Log{
+    width: 35%;
+    height: 90%;
+    /*border: 0.1px solid black;*/
+    position: relative;
+    left: 65%;
+    top: 3%;
+    background-color: white;
+}
+#Log-top{
+    width: 100%;
+    /*border: 0.1px solid green;*/
+    height: 30px;
+    background-color: rgb(255,248,240);
+}
+#Log-top img{
+    position: relative;
+    top: 3px;
+}
+.pp{
+    display: inline-block;
+    font-size: 40%;
+}
+.pp1{
+    position: relative;
+    left: 5%;
+}
+#Log1{
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 1px 0.5px #aaa;
+    /*border: 0.1px solid green;*/
+}
+.Log-2{
+    width: 49%;
+    height: 100%;
+    /*border: 0.1px solid black;*/
+    display: inline-block;
+    position: relative;
+}
+.Log-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 90%;
+    text-decoration: none;
+}
+.Log-3{
+    color: grey;
+}
+.Log-4,
+.Log-3:hover{
+    color:rgb(227,51,51);
+}
+#Log2{
+    width: 92%;
+    height: 160px;
+    /*border: 0.1px solid blue;*/
+    position: relative;
+    left: 3%;
+    top: 6%;
+}
+
+#Log2 input{
+    width: 70%;
+    height: 36px;
+}
+
+#Log2 img{
+    position: relative;
+    left: 2.5%;
+    top: 15px;
+}
+#Log2 p{
+    font-size: 60%;
+    color: black;
+    position: relative;
+    left: 70%;
+    top: 12px;
+}
+#Log3{
+    width: 78%;
+    height: 33px;
+    background-color: rgb(228,57,60);
+    position: relative;
+    left: 5%;
+    top: 15%;
+}
+#Log3 p{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#Log4{
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 0.5px 0.25px #aaa;
+    background-color: rgb(252,252,252);
+    position: relative;
+    top: 25.5%;
+}
+.Log-4-1{
+    font-size: 50%;
+    color: grey;
+}
+#Log4 a{
+    text-decoration: none;
+}
+.Log-4-2{
+    color: rgb(228,57,60);
+}
+.Log-4-3{
+    position: relative;
+    left: 10%;
+}
+#Log4 .Log-4-3:hover,
+#Log4 .Log-4-1:hover{
+    text-decoration: underline;
+    color: rgb(228,57,60);
+}
+.Log-4-4{
+    margin-right: 3%;
+    position: relative;
+    top: 13%;
+}
+#Log4 img{
+    position: relative;
+    top: 5px;
+}
+
+
+p{
+    display: inline-block;
+}
+.L-top1{
+    color: rgb(59,59,59);
+    font-size: 160%;
+}
+.L{
+    position: relative;
+    left: 15%;
+}
+.L-top2{
+    color: rgb(153,153,153);
+    text-decoration: none;
+    font-size: 80%;
+}
+.L-top2:hover{
+    color: rgb(228,57,60);
+    text-decoration: underline;
+}
+#L-1{
+    width: 15%;
+    position: relative;
+    left: 80%;
+    bottom: 15%;
+}
+
+#end{
+    width: 100%;
+    height: 30px;
+    /*border: 0.1px solid green;*/
+}
+#end span,
+#end a{
+    float: left;
+    list-style-type: none;
+    font-size: 80%;
+}
+.L-3{
+    color: grey;
+    text-decoration: none;
+    margin-right: 1%;
+    position: relative;
+    left: 15%;
+    top: 13%;
+}
+#end a:hover{
+    color: rgb(228,57,60);
+    text-decoration: underline;
+}

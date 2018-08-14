@@ -1,0 +1,232 @@
+
+
+加 * 代表未完全解读
+个文件介绍 以及其中的详细内容
+	Atomic.h 封装原子操作
+	types.h 编写高质量代码所需 设置了如果处于非调试阶段时期的该采用的方式 主要提供 向下转化的内容
+	LogStream.h 这里面定义了 日志流所用缓冲区的类以及流的类 不明白 其中的 Cookie操作以及 不明白其中的Fmt模板的作用是个啥
+	Logging.h 这里定义了 封装的日志类以及定义的宏 方便使用这里面使用Impl封装了LogStream并输出到缓冲区
+		知识点
+			strerror_r 安全模式的strerror
+	FileUtil
+		这里定义了一个命名空间 其中两个类 分别用于读取文件和写文件
+	LogFile
+		这里定义了 LogFile 类 此类的作用是管理日志文件的创建和写入工作 调用 FileUtil中的写类
+		知识点
+			strftime 此函数用于格式化输出时间
+	
+	CurrentThread.h	这里定义了一个命名空间 CurrentThread
+		里面知识点包含 关键字__thread 解释只能声明各种程序进行期间有的数据 比如 static 和全局变量
+	
+	*TimeZone 控制时区的类
+	
+	
+	
+原子性操作
+
+以下 函数如果采用的是自定义类型的话 则也是原子操作
+
+原子自增操作
+type __sync_fetch_and_add(type *ptr , type value);
+
+原子比较和交换操作
+type __sync_val_compare_swap(type *ptr , type oldval ,type newval);
+
+//比较成功则给予新值 看跟oldval 是否相等
+bool __sync_bool_compare_and_swap(type *ptr , type oldval ,type newval);
+
+原子赋值操作
+type __sync_lock_test_and_set(type *ptr , type value);
+
+使用这些原子性操作的时候需要 编译时添加 -march=cpu-type
+
+关于volatile 当使用volatile变量的时候总是从内存中读取 不会从寄存器中读取变量 防止线程之间的修改
+
+gcc 补充 -Wall 大部分的都会给出警告
+		-Werror 警告当成错误处理 此时停止编译
+		-Wextra 显示额外警告
+		-Wconversion 一些可能改变值的隐式转换会给出警告
+		-Wold-style-cast C的变量转换给出警告
+		-Wpointer-arith 对函数指针或者void* 类型的指针进行算术操作时给出警告
+		-Wshadow 局部变量遮挡住另一个局部变量时 给出警告
+		-march=native 指定CPU体系结构为本地平台 这个是个啥意思？？ 目的是 
+预定义内容
+	NDEBUG 不处于调试状态
+	
+		
+		
+关于dynamic_cast<>
+相比于static_cast<> 有安全检查 如果downcast 是不安全的 则会返回nullptr
+
+Exception 类的实现
+其中使用了
+int backtrace(void **buffer , int size); // 函数指针存在buffer里面 最大有size个 返回真实有多少
+根据函数指针数组返回函数名数组
+char ** backtrace_symbols(void * const * buffer , int size);
+
+通过gettid()函数获取线程的真实pid(一个线程用轻量级的进程实现)
+
+
+
+第二天
+日志的作用
+开发过程中：
+	调试错误
+	更好的理解程序
+运行过程中
+	诊断系统的故障并处理
+	记录系统的运行状态
+	
+日志级别
+	TRACE 指出比DEBUG 粒度更细的信息事件 (开发中使用)
+	DEBUG (开发中使用)
+	INFO 强调应用程序的运行过程
+	WARN 系统正常运行但可能会出现潜在的错误情形
+	ERROR 发生错误但是还不影响运行
+	FATAL 发生致命错误
+
+	输出高一级的日志则低级日志不会输出
+
+
+			void append(const char* /*restrict*/ buf, size_t len)
+			{
+			// 为啥要用implicit_cast????? 因为上升的类型转换最好用implicit_cast
+				if (implicit_cast<size_t>(avail()) > len)
+				{
+					memcpy(cur_, buf, len);
+					cur_ += len;
+				}
+			}
+	现代sring 都是写时复制所以 我认为 StringPeace 没有存在的必要因为不会因为 string而浪费空间如果不改变值的话
+
+
+Linux 能够同时启动多少进程 一个线程默认栈的大小是10M 一个进程大学能同时启动300个线程
+Reactor模式才是王者 
+线程分类
+I/O线程
+计算线程
+第三方库使用的线程 如logging 日志系统单独一个线程使用队列
+
+Tcp网络编程的本质在于处理三个半事件
+连接建立
+连接断开
+连接处理
+	onMessage
+	作用：从内核缓冲区到应用缓冲区
+	判断协议是否完整
+	完整则执行下列操作
+	read
+	decode
+	compute
+	encode
+	write
+消息发送完毕事件
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+
+
+其实这些任务是在某个线程中存在的
+所以我需要一个接口 使用户不用接触到底层的线程的东西 便可以根据服务直接添加线程中该完成的事情
+对于web服务器也就是说
+线程中应该完成
+//注意 结构是
+连接到来的时候读取                          惊人的发现读取多少怎么读取 需要自己设置
+然后直接进行处理
+将处理的结果返回给客户端					如何返回需要自己设置
+
+所以通过net流提供的接口 可以返回数据 完成上述代码的编写
+
+HttpServer
+	TcpServer:
+		通过这个提供的接口提供了具体的解决方案
+		setConnectCallBack(); //这个接口负责设置连接时需要进行的操作 主要是连接时日志的写入
+		setMessageCallBack();//通过这个接口设置回调函数 此函数用在线程实际执行的任务中 这个通过bind函数进行改变设置就好
+
+	//这里不改变工作目录 直接通过全局变量进行访问
+	web信息的根目录
+	
+	
+
+HTTP的协议请求怎么设置呢
+
+以下是我的在有可读事件时的预期代码
+server内通过网络流的抽象进行数据的读取
+HttpRequest
+想通过异常机制来设置状态的值
+
+	//从网络流读取报文 但是没有流 其实应该设置流的 这样子可以减少系统调用从而增快速度
+	NetStream >> HttpServer;
+
+	//将报文输出到网络流
+	NetStream << HttpServer;
+
+	HttpServer.addServer(/*这里是一个服务 一个*/);
+
+	//通过不正常状态配合HttpRequest的报文得出结果
+	HttpRespons( HttpRequest , statusCode )
+	HttpServer.sendHttpRespons(HttpRespons)
+
+HttpServer.sendHttpRespons( HttpRespons(HttpRequest) )
+
+
+对于报文第一行的设置 这里在URL 命令 协议类型等被保留下来 这些在至于怎么处理则通过
+
+
+accept4() 多存在一个参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define XXX_a 0x001
+0x 002 4 
+
+main()
+{
+	解析命令行 返回一种标识 唯一标识一个处理
+	int fun1(argc , argv);返回一个值
+	将参数指向的目录文件啦 整合起来
+	void fun2(argc , argv);
+	
+	根据标识 进行对应的输出
+	void fun3(int code);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

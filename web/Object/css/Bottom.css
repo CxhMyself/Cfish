@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#Bottom{
+    width: 100%;
+    height: 1615px;
+    /*border: 0.1px solid black;*/
+    background-color: rgb(240,243,239);
+}
+#B-1{
+    width: 100%;
+    height: 275px;
+    /*border: 0.1px solid red;*/
+    position: relative;
+    top: 5%;
+}
+#B-1-1{
+    width: 80%;
+    height: 100%;
+    /*border: 0.1px solid green;*/
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%);
+    background-color: white;
+}
+#B-L1{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    /*border: 0.1px solid pink;*/
+    position: relative;
+    top: -17.5%;
+    background-color: rgb(232,54,50);
+}
+#B-L1 img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+}
+#B-L1 p{
+    position: relative;
+    top: 10%;
+}
+.B-L2{
+    display: inline-block;
+    width: 20%;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    left: 28%;
+    transform: translateX(-50%);
+}
+#B-1-2{
+    position: relative;
+    top: 30%;
+}
+.B-L2 p{
+    color: white;
+    left: 21%;
+    position: absolute;
+    font-size: 140%;
+}
+.B-l2{
+    display: inline-block;
+    width: 19%;
+    height: 100%;
+}
+.B-l2 img{
+    position: relative;
+    left: 18%;
+    top: 20px;
+
+}
+.B-l2 a{
+    position: relative;
+    top: 30px;
+    left: 12%;
+}
+.B-l2 p{
+    width: 80%;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 80%;
+    color: grey;
+}
+#Bottom #B-1 #B-1-1 .B-l2 a:hover{
+    color: rgb(232,54,50);
+}
+.B-l3{
+    width: 90%;
+    height: 20px;
+    position: relative;
+    top: 27%;
+    left: 8%;
+}
+.B-l3 div{
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+}
+#B-2{
+    width: 100%;
+    height: 480px;
+    position: relative;
+    /*left: -21%;*/
+    top: 100px;
+}
+.B-2-1{
+    width: 39%;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    background-color: white;
+}
+
+.B-2-2{
+    width: 100%;
+    height: 480px;
+    /*border: 0.1px solid grey;*/
+}
+.B-2-T img{
+    position: relative;
+    top: 20%;
+    margin-right: 0;
+    margin-left: 5%;
+}
+.B-2-T span{
+    position: relative;
+    top: 10%;
+    left: 5%;
+}
+.B-2-M{
+    width: 100%;
+    height: 34px;
+    background-color: rgb(240,243,239);
+}
+.B-2-M div{
+    float: left;
+    width: 20%;
+    height: 34px;
+}
+.B-2-M a{
+    display: block;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 90%;
+    position: relative;
+    top: 20%;
+    color: grey;
+}
+.B-2-M a:hover{
+    color: red;
+}
+.B-2-T{
+    width: 100%;
+    height: 60px;
+}
+.B-2-B span{
+    color: grey;
+}
+.B-2-B{
+    width: 100%;
+    height: 321px;
+    /*border: 0.1px solid blue;*/
+}
+.B-2-B a{
+    display: block;
+    width: 100%;
+    height: 107px;
+    /*border: 0.1px solid pink;*/
+}
+#B-2-2 .B-2-B a span:hover{
+    color: red;
+}
+.B-2-B img{
+    position: relative;
+    top: 10%;
+    left: 4%;
+}
+.B-2-B span{
+    position: relative;
+    top: -15%;
+    left: 4%;
+}
+
+.B-2-C{
+    width: 100%;
+    height: 50px;
+}
+.B-2-C span{
+    display: inline-block;
+    width: 1.5%;
+    height: 8px;
+    border-radius: 48px;
+    border: 1px solid black;
+    position: relative;
+    left: 40%;
+    top: 30px;
+}
+.sp1{
+    background-color: red;
+}
+
+#spe{
+    position: relative;
+    left: 51%;
+}
+#B-3{
+    width: 100%;
+    height: 400px;
+    /*border: 0.1px solid green;*/
+    position: relative;
+    top: 150px;
+}
+#pi{
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.B-3-1{
+    width: 80%;
+    height: 305px;
+    /*border: 0.1px solid #aaa;*/
+    position: relative;
+    left: 10%;
+    top: 60px;
+}
+
+.B-3-2{
+    width: 22%;
+    height: 305px;
+    background-color: white;
+    position: relative;
+    float: left;
+    margin-right: 3%;
+}
+
+.B-3-b{
+    width: 90%;
+    height: 40px;
+    /*border: 0.1px solid black;*/
+    position: absolute;
+    left: 50%;
+    top: 220px;
+    transform: translate(-50%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 95%;
+}
+.B-3-2 .pi2{
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%);
+}
+
+.B-3-2 p{
+    position: absolute;
+    bottom: 10px;
+    color: rgb(232,54,50);
+    left: 50%;
+    transform: translate(-50%);
+}
+#B-4{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 170px;
+}
+.B-4-1{
+    float: left;
+    margin-left: 8%;
+}
+.B-4-1 p{
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    font-size: 110%;
+    font-weight: bold;
+}
+#B-5{
+    width: 100%;
+    height: 225px;
+    border: 0.1px solid #aaa;
+    position: relative;
+    top: 190px;
+}
+
+.B-5-1{
+    width: 7%;
+    height: 200px;
+    /*border: 0.1px solid #aaa;*/
+    float: left;
+    margin-top: 30px;
+    margin-left: 7%;
+}
+.B1{
+    font-weight: bold;
+}
+.B2{
+    font-size: 80%;
+}
+.B-5-1 p{
+    margin-top: 9%;
+}

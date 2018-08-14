@@ -1,0 +1,384 @@
+*{
+     margin: 0;
+     padding: 0;
+ }
+
+a{
+    text-decoration: none;
+}
+
+#Top{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(227,228,229);
+    overflow: hidden;
+}
+.left{
+    float: left;
+    list-style-type: none;
+}
+.right{
+    float: right;
+    list-style-type: none;
+    margin-right: 1%;
+    position: relative;
+    top: 7px;
+}
+.zi1{
+    font-size: 70%;
+}
+
+#left{
+    position: absolute;
+    left: 23%;
+}
+
+#right{
+    padding-right: 6.5%;
+}
+.content{
+    position: relative;
+    top: 7px;
+}
+.content1{
+    position: relative;
+    top: 4px;
+}
+
+.shu{
+    font-size: 5%;
+}
+#Middle{
+    width: 100%;
+
+    background-color: rgb(240,243,239);
+}
+.picture1{
+    box-shadow: 0px 0px 1px 0.5px gainsboro;
+    width: 190px;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 6%;
+}
+#input1{
+     width: 65%;
+     height: 60px;
+ }
+#input2{
+    width: 50%;
+    height: 18px;
+    position: relative;
+    background-color: white;
+    border:0.1px solid white;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+#Input{
+    width: 100%;
+    height: 110%;
+    position:absolute;
+    top: -5px;
+    left: 0;
+}
+#button{
+    width: 50px;
+    height: 32px;
+    background-color:rgb(241,2,21);
+    position: relative;
+    left: -10px;
+    top: -5px;
+    border: white;
+}
+.input{
+    display: inline-block;
+}
+#input3{
+    width: 44px;
+    height: 32px;
+    background-color: white;
+    position: relative;
+    border: 0.5px solid rgb(153,153,153);
+    left: -5px;
+    top: -13.7px;
+}
+#input3 img{
+   position: relative;
+    left: 11px;
+    top: 8px;
+}
+#sousuo{
+    position: relative;
+    width: 100%;
+    height: 140px;
+    /*border: 0.1px solid black;*/
+}
+
+#buy{
+    width: 23%;
+    height: 31px;
+    position: relative;
+    top: -9px;
+    left: 5%;
+    background-color: white;
+}
+
+#buy a{
+    font-size: 50%;
+    color: rgb(241,2,20);
+    position: relative;
+    left: 26%;
+
+}
+#buy span{
+    font-size: 65%;
+    color: white;
+    width: 5%;
+    border-radius: 40%;
+    background-color: rgb(241,2,20);
+    position: relative;
+    left: 27%;
+    top: -10%;
+}
+#buy img{
+    position: relative;
+    top: 10%;
+    left: 25%;
+}
+#ma{
+    position: relative;
+    left: 10%;
+}
+
+#sousuo2,
+#input1{
+    position: relative;
+    left: 27%;
+}
+#sousuo2{
+    margin-top: 0.5%;
+    width: 50%;
+}
+
+.sousuo2{
+    font-size: 60%;
+}
+
+.sousuo2,
+.zi1{
+    color: rgb(153,153,153);
+}
+
+#sou{
+    width: 75%;
+    height: 45px;
+    /*border: 0.1px solid black;*/
+    position: relative;
+    left: 23%;
+    top: 12%;
+}
+
+li{
+    list-style-type: none;
+    float: left;
+}
+
+#sou li{
+    color: rgb(194,196,193);
+    margin-right: 2%;
+}
+
+#sou .suo1{
+    color: rgb(51,51,51);
+    font-size: 90%;
+}
+#wu img{
+    width: 30px;
+    height: 10px;
+}
+#Sousuo{
+    position: relative;
+    left: 3%;
+    top: -10px;
+    width: 15%;
+}
+#special1,
+.Hov:hover,
+#sousuo1,
+.sousuo2:hover,
+#sou .suo1:hover,
+#left_l .li1:hover,
+#Top1 .U-t:hover,
+#M-2 .T-1:hover{
+    color: rgb(227,51,51);
+}
+#left_l .Y{
+    width: 100%;
+}
+#left_l .Y:hover{
+    background-color: rgb(217,217,217);
+}
+#liulan{
+    width: 100%;
+    height: 468px;
+    /*border: 0.1px solid black;*/
+    overflow: hidden;
+    background-image:url(../images/liulan/beijing.png);
+    background-position-x: 50%;
+}
+#left_l{
+    width: 190px;
+    height: 468px;
+    /*border: 0.1px solid red;*/
+    background-color: white;
+    display: inline-block;
+}
+#left_l{
+    position: relative;
+    left: 6%;
+    top: 1.5px;
+}
+#left_l a{
+    font-size: 95%;
+}
+#left_l a,
+#left_l span{
+    color: rgb(134,134,134);
+}
+#left_l .Y{
+    margin-top: 3.2%;
+}
+#left_l span{
+    font-size: 60%;
+}
+
+#Eat {
+    width: 14.3%;
+    height: 464px;
+    display: inline-block;
+    position: relative;
+    left: 6%;
+    top: -1%;
+}
+#User{
+    width: 14%;
+    height: 464px;
+    display: inline-block;
+    position: relative;
+    top: -65.5%;
+    left: 6%;
+    background-color: white;
+}
+
+#User p{
+    text-align: center;
+}
+#Top1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 45px;
+}
+#Top1{
+    width: 100%;
+    height: 140px;
+}
+.T-1{
+    color: rgb(136,136,136);
+}
+
+.T-1,
+.U-t{
+    font-size: 80%;
+}
+.U-t{
+    color: rgb(102,102,102);
+}
+.T-2{
+    border:0.1px solid blue;
+    background-color: white;
+    font-size: 80%;
+    padding: 2%;
+    border-radius: 25%;
+    box-shadow: 0 0 1px 0.5px #aaa;
+    margin-right: 6%;
+    margin-left: 9%;
+}
+
+#t-1{
+    background-color: white;
+    color: rgb(228,63,59);
+}
+#t-1:hover,
+#t-2:hover{
+    background-color: rgb(224,18,34);
+    color: white;
+}
+#t-2{
+    color: rgb(175,166,116);
+    background-color: rgb(54,54,52);
+}
+
+#Top1 #D-1{
+    position: relative;
+    top: 7%;
+}
+#Middle1{
+    width: 100%;
+    height: 123px;
+    border-bottom: 0.1px solid rgb(235,234,234);
+}
+#M-1{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 3%;
+}
+.U-1{
+    margin-right: 6%;
+}
+.U-2{
+    margin-left: 25%;
+}
+#M-2{
+    width: 100%;
+}
+#M-2 li{
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    margin-left: 4%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#Bottom1{
+    width: 100%;
+    height: 194px;
+    margin-top: 2%;
+}
+
+.B-1,
+.B-2,
+.B-3{
+    float: left;
+}
+#Bottom1 span{
+    font-size: 75%;
+    color: rgb(190,146,141);
+}
+.B{
+    width: 100%;
+    height: 57px;
+    /*border: 0.1px solid green;*/
+    margin-top: 3%;
+    position: relative;
+}
+#Bottom1 .B a{
+    width: 24%;
+    height: 57px;
+    /*border: 0.1px solid blue;*/
+}
+#Bottom1 p{
+    text-align: center;
+}

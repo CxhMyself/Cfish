@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#view{
+    width: 43.8%;
+    height: 468px;
+    display: inline-block;
+    position: relative;
+    left: 6%;
+    top: -0.5%;
+    overflow: hidden;
+}
+#lunbo img{
+    float: left;
+    width: 590px;
+    height: 468px;
+    animation: myself 32s linear infinite;
+}
+#lunbo{
+    width: 4130px;
+    height: 468px;
+}
+
+@keyframes myself {
+    0%{
+        transform: translateX(0);
+    }
+
+    11%{
+        transform: translateX(0);
+    }
+
+    14%{
+        transform: translateX(-590px);
+    }
+
+    26%{
+        transform: translateX(-590px);
+    }
+
+    28%{
+        transform: translateX(-1180px);
+    }
+
+    40%{
+        transform: translateX(-1180px);
+    }
+
+    42%{
+        transform: translateX(-1770px);
+    }
+
+    54%{
+        transform: translateX(-1770px);
+    }
+
+    56%{
+        transform: translateX(-2360px);
+    }
+
+    68%{
+        transform: translateX(-2360px);
+    }
+
+    70%{
+        transform: translateX(-2950px);
+    }
+
+    82%{
+        transform: translateX(-2950px);
+    }
+
+    84%{
+        transform: translateX(-3540px);
+    }
+
+    100%{
+        transform: translateX(-3540px);
+    }
+}
